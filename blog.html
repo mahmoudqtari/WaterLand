@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Single Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap 5.3-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- font-awesome 6.4-->
+    <link rel='stylesheet' href='assets/css/all.min.css'>
+    <!-- castume css-->
+    <link rel="stylesheet" href="assets/css/index.min.css">
+    <link rel="stylesheet" href="assets/css/blog.min.css">
+    <!-- Media css-->
+    <link rel="stylesheet" href="assets/css/media.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/waterland-page-icon.png">
+
+</head>
+
+<body>
+    
+    <div class="scrool-top opacity-0 invisible position-fixed d-flex justify-content-center align-items-center z-3">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    
+    <div class="loding position-fixed w-100 h-100 d-flex justify-content-center align-items-center bg-white">
+        <span class="loader"></span>
+    </div>
+    
+    <!-- Start Nav -->
+    <section class="nav-bar position-fixed w-100 z-3">
+        <nav class="navbar p-0 navbar-expand-lg fixed-top z-0">
+            <div class="container">
+                <div class="logo-img">
+                    <img class="img " src="assets/imgs/logo-waterland.png" alt="waterLand-img">
+                </div>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div class="logo-img offcanvas-title" id="offcanvasNavbarLabel">
+                            <img class="img " src="assets/imgs/logo-waterland.png" alt="waterLand-img">
+                        </div>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav gap-2 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="service.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="booking.html">Booking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="team.html">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <div class="social-team d-flex">
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-facebook-f px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-twitter px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-youtube px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-instagram px-2"></i>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="settings d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-bars"></i>
+                </div>-->
+            </div>
+        </nav>
+        <nav class="navbar p-0 fixed-rigth d-flex justify-content-end" id="navbar2">
+            <button class="settings d-block navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar1" aria-controls="offcanvasNavbar1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="offcanvas offcanvas-settings offcanvas-end" tabindex="-1" id="offcanvasNavbar1"
+                aria-labelledby="offcanvasNavbarLabel1">
+                <div class="offcanvas-header d-flex justify-content-end">
+                    <i class="fa-solid fa-xmark btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container">
+                        <div class="logo-img w-50">
+                            <img class="img w-100 h-100" src="assets/imgs/logo-footer.png" alt="waterLand-img">
+                        </div>
+                        <p class="py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel risus imperdiet, gravida justo eu.</p>
+                        <h3 class="text-white">Our Location</h3>
+                        <div class="info">
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">Jl. Raya Ubud No.88, Bali 80571</p>
+                            </div>
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-envelope"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">support@domain.com</p>
+                            </div>
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">(+62)81 1235 3368</p>
+                            </div>
+                        </div>
+                        <h3 class="text-white pt-5">Social Media</h3>
+                        <div class="social-icons d-flex gap-4">
+                            <a class="facebook d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a class="twitter d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a class="instagram d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a class="youtube d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- End Nav -->
+
+    <!-- Start blog header -->
+    <div class="blog-header d-flex justify-content-center align-items-center">
+        <div class="blog-header-content text-center">
+            <h1 class="text-uppercase text-white">5 WAYS TO ENJOY WATERBOOM THIS SPRING BREAK</h1>
+            <div class="icons d-flex justify-content-center">
+                <div class="user-icon pe-4">
+                    <i class="fa-solid fa-user pe-2"></i>
+                    <p class="text-white d-inline-block">John Doe</p>
+                </div>
+                <div class="calendar-icon pe-4">
+                    <i class="fa-solid fa-calendar-days pe-2"></i>
+                    <p class="text-white d-inline-block">August 5, 2021</p>
+                </div>
+                <div class="folder-icon pe-4">
+                    <i class="fa-solid fa-folder-open pe-2"></i>
+                    <p class="text-white d-inline-block">Spring</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End blog header -->
+
+    <!-- Start Blog Info -->
+    <div class="blog-info change-navbar-point py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="img">
+                        <img class="w-100 h-100 object-fit-cover" src="assets/imgs/children-in-the-water-park.jpg" alt="children-in-the-water-park">
+                    </div>
+                    <p class="pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <div class="row py-2">
+                        <div class="col-md-6 pb-3">
+                            <div class="img">
+                                <img class="w-100 h-100" src="assets/imgs/little-girl-on-water-slide-at-aquapark-during-summer-holiday-e1628826082821.jpg"
+                                alt="little-girl-on-water-slide">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <div class="performance">
+                                <div class="package-list">
+                                    <ul class="list-unstyled">
+                                        <li class="d-flex">
+                                            <i class="fa-solid fa-check pe-1 pt-1"></i>
+                                            <p>Quisque aliquet nibh sit amet lectus</p>
+                                        </li>
+                                        <li class="d-flex">
+                                            <i class="fa-solid fa-check pe-1 pt-1"></i>
+                                            <p>Nulla at metus ultricies, placerat augue</p>
+                                        </li>
+                                        <li class="d-flex">
+                                            <i class="fa-solid fa-check pe-1 pt-1"></i>
+                                            <p>Curabitur mollis ex vestibulum</p>
+                                        </li>
+                                        <li class="d-flex">
+                                            <i class="fa-solid fa-check pe-1 pt-1"></i>
+                                            <p>Quisque aliquet nibh sit amet lectus auctor</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <div class="social d-sm-flex justify-content-sm-between border-bottom pb-5">
+                        <div class="tags d-flex align-items-center pb-3 pb-sm-0">
+                            <p class="mb-0 pe-3">Tags :</p>
+                            <h4 class="mb-0">spring</h4>
+                        </div>
+                        <div class="social-icons d-flex align-items-center">
+                            <p class="pe-3 mb-0">Share This :</p>
+                            <div class="links gap-3 d-flex justify-content-between">
+                                <div class="facebook d-flex justify-content-center align-items-center">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </div>
+                                <div class="twitter d-flex justify-content-center align-items-center">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </div>
+                                <div class="whatsup d-flex justify-content-center align-items-center">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="pt-5">LEAVE A REPLY</h2>
+                    <p>Your email address will not be published. Required fields are marked *</p>
+                    <form id="blog-form" class="blog-form">
+                        <label for="comment" class="d-block"><h4>Comment *</h4></label>
+                        <textarea id="comment" class="d-block w-100 form-control" name="comment" cols="45" rows="8" maxlength="65525" required=""></textarea>
+                        <label class="comment_label mt-3 text-danger d-none" for="comment">Insert comment from max 200 digit in small letter</label>
+
+                        <label for="name" class="d-block pt-4"><h4>Name *</h4></label>
+                        <input type="text" class="d-block w-100 form-control" name="name" id="name" required>
+                        <label class="name_label mt-3 text-danger d-none" for="name">Name must start with capital letter an d have from 3 to 20 character</label>
+
+                        <label for="email" class="d-block pt-4"><h4>Email *</h4></label>
+                        <input type="email" class="email d-block w-100 form-control" name="email" id="email" required>
+                        <label class="email_label mt-3 text-danger d-none" for="email">Only gmail account allowed and  max 20 character for first part</label>
+                    
+                        <div class="pt-4 d-flex gap-2">
+                            <input type="checkbox" name="save" id="save">
+                            <label for="save"><h4>Save my name, email, and website in this browser for the next time I comment.</h4></label>
+                        </div>
+                        
+                        <input type="submit" id="btn-submit-blog" class="d-block submit mt-4" value="POST COMMENT">
+                    </form>
+                </div>
+                <div class="col-lg-4 offset-lg-1 pt-5 pt-lg-0">
+                    <div class="posts p-5 mb-5">
+                        <h3>Recent Posts</h3>
+                        <a href="#">
+                            <p class="mb-0 text-black">Why Children Dont Like Getting Out Of The Water</p>
+                        </a>
+                        <div class="date py-2">
+                            <p>
+                                <i class="fa-solid fa-clock"></i>
+                                <span>August 10, 2021</span>
+                            </p>
+                        </div>
+                        <a href="#">
+                            <p class="mb-0 text-black">5 Reasons To Escape The Cold Weather This Season</p>
+                        </a>
+                        <div class="date py-2">
+                            <p>
+                                <i class="fa-solid fa-clock"></i>
+                                <span>August 5, 2021</span>
+                            </p>
+                        </div>
+                        <a href="#">
+                            <p class="mb-0 text-black">5 Ways To Enjoy Waterboom This Spring Break</p>
+                        </a>
+                        <div class="date py-2">
+                            <p>
+                                <i class="fa-solid fa-clock"></i>
+                                <span>August 5, 2021</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="questions text-white p-5 mb-5">
+                        <h3>Have Any Question?</h3>
+                        <p class="text-white">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                        <div class="contact">
+                            <div class="phone d-flex">
+                                <p>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <p class="text-white mb-0">(+62)81 1235 3368</p>
+                                </p>
+                            </div>
+                            <div class="email d-flex">
+                                <p>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <p class="text-white mb-0">support@domain.com</p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categories">
+                        <a class="vocation d-block pb-3 text-black">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <p class="mb-0 d-inline-block text-black">Vocation</p>
+                        </a>
+                        <a class="spring d-block pb-3 text-black">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <p class="mb-0 d-inline-block text-black">Spring</p>
+                        </a>
+                        <a class="insight d-block pb-3 text-black">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <p class="mb-0 d-inline-block text-black">Insight</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog Info -->
+
+    <!-- Start Footer-->
+    <footer class="footer position-relative text-white">
+        <div class="container w-100 h-100">
+            <div class="row pt-5">
+                <div class="col-lg-3 col-md-6 pt-5">
+                    <img src="assets/imgs/logo-footer.png" alt="logo-footer">
+                    <p class="pt-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <div class="info">
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Jl. Raya Ubud No.88, Bali 80571</p>
+                        </div>
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-envelope"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">support@domain.com</p>
+                        </div>
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">(+62)81 1235 3368</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 pt-5">
+                    <h4>Quick Links</h4>
+                    <div class="info">
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">About Us</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Service</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Booking</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Backage</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Contact</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-5">
+                    <h4>Useful Links</h4>
+                    <div class="info">
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Privacy Policy</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Terms and Conditions</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Disclaimer</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Support</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">FAQ</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pt-5">
+                    <h4>Opening Hours</h4>
+                    <div class="op-hour">
+                        <div class="m-f-day pt-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Monday - Friday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">11:00 AM - 16:00 PM</->
+                            </div>
+                        </div>
+                        <div class="s-s-day pt-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Saturday - Sunday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">09:00 AM - 17:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="holiday py-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Holiday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">09:00 AM - 17:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-md-flex justify-content-sm-between pay-card">
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-mastercard"></i>
+                            <p class="d-inline-block">MasterCard</p>
+                        </a>
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-paypal"></i>
+                            <p class="d-inline-block">PayPal</p>
+                        </a>
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-visa"></i>
+                            <p class="d-inline-block">Visa</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-detals mt-5 py-3 d-sm-flex justify-content-between">
+                <div class="text-md-start text-center">
+                    <p>Water & Amusement Park Template Kit by Jegtheme</p>
+                </div>
+                <div class="text-md-end text-center">
+                    <p>Copyright © 2021. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <svg class="position-absolute bottom-0 w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"
+            preserveAspectRatio="none">
+            <path class="elementor-shape-fill"
+                d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+            <path class="elementor-shape-fill" opacity="0.33"
+                d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+            <path class="elementor-shape-fill" opacity="0.66"
+                d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+        </svg>
+    </footer>
+    <!-- End Footer-->
+
+    <!--bootstrap 5.3-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/validationBlog.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

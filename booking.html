@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap 5.3-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- font-awesome 6.4-->
+    <link rel='stylesheet' href='assets/css/all.min.css'>
+    <!-- castume css-->
+    <link rel="stylesheet" href="assets/css/index.min.css">
+    <!-- booking css -->
+    <link rel="stylesheet" href="assets/css/booking.min.css">
+    <!-- Media css-->
+    <link rel="stylesheet" href="assets/css/media.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/waterland-page-icon.png">
+</head>
+
+<body>
+
+    <div class="scrool-top opacity-0 invisible position-fixed d-flex justify-content-center align-items-center z-3">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    
+    <div class="loding position-fixed w-100 h-100 d-flex justify-content-center align-items-center bg-white">
+        <span class="loader"></span>
+    </div>
+    
+    <!-- Start Nav -->
+    <section class="nav-bar position-fixed w-100 z-3">
+        <nav class="navbar p-0 navbar-expand-lg fixed-top z-0">
+            <div class="container">
+                <div class="logo-img">
+                    <img class="img " src="assets/imgs/logo-waterland.png" alt="waterLand-img">
+                </div>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div class="logo-img offcanvas-title" id="offcanvasNavbarLabel">
+                            <img class="img " src="assets/imgs/logo-waterland.png" alt="waterLand-img">
+                        </div>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav gap-2 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="service.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="booking.html">Booking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="team.html">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <div class="social-team d-flex">
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-facebook-f px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-twitter px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-youtube px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-instagram px-2"></i>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="settings d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-bars"></i>
+                </div>-->
+            </div>
+        </nav>
+        <nav class="navbar p-0 fixed-rigth d-flex justify-content-end" id="navbar2">
+            <button class="settings d-block navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar1" aria-controls="offcanvasNavbar1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="offcanvas offcanvas-settings offcanvas-end" tabindex="-1" id="offcanvasNavbar1"
+                aria-labelledby="offcanvasNavbarLabel1">
+                <div class="offcanvas-header d-flex justify-content-end">
+                    <i class="fa-solid fa-xmark btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container">
+                        <div class="logo-img w-50">
+                            <img class="img w-100 h-100" src="assets/imgs/logo-footer.png" alt="waterLand-img">
+                        </div>
+                        <p class="py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel risus imperdiet, gravida justo eu.</p>
+                        <h3 class="text-white">Our Location</h3>
+                        <div class="info">
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">Jl. Raya Ubud No.88, Bali 80571</p>
+                            </div>
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-envelope"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">support@domain.com</p>
+                            </div>
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">(+62)81 1235 3368</p>
+                            </div>
+                        </div>
+                        <h3 class="text-white pt-5">Social Media</h3>
+                        <div class="social-icons d-flex gap-4">
+                            <a class="facebook d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a class="twitter d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a class="instagram d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a class="youtube d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- End Nav -->
+
+    <!-- Start booking header -->
+    <div class="booking-header d-flex justify-content-center align-items-center">
+        <div class="booking-header-content text-center">
+            <h2 class="text-uppercase text-white">Book Now</h2>
+            <span class="text-white d-inline-block pe-2">Home</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="text-white d-inline-block ps-2">Booking</span>
+        </div>
+    </div>
+    <!-- End booking header -->
+
+    <!-- Start Terms -->
+    <div class="trems change-navbar-point py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <h2>TERMS</h2>
+                    <h3>WE'VE HAVE SOME SIMPLE RULES AND REGULATIONS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+                    <div class="package-performance">
+                        <div class="package-list">
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-lg-center justify-content-md-start align-items-center pt-3">
+                                    <i class="fa-solid fa-check pe-1"></i>
+                                    <p class="mb-0">Kids under 4 must wear protective swim pants</p>
+                                </li>
+                                <li class="d-flex justify-content-lg-center justify-content-md-start align-items-center pt-3">
+                                    <i class="fa-solid fa-check pe-1"></i>
+                                    <p class="mb-0">Kids under 13 must be supervised at all times by an adult aged 18 years or older</p>
+                                </li>
+                                <li class="d-flex justify-content-lg-center justify-content-md-start align-items-center pt-3">
+                                    <i class="fa-solid fa-check pe-1"></i>
+                                    <p class="mb-0">Kids under 13 may not use the adult whirlpools</p>
+                                </li>
+                                <li class="d-flex justify-content-lg-center justify-content-md-start align-items-center pt-3">
+                                    <i class="fa-solid fa-check pe-1"></i>
+                                    <p class="mb-0">Not Permitted Smoking, Coolers, Food and beverage from outside sources</p>
+                                </li>
+                                <li class="d-flex justify-content-lg-center justify-content-md-start align-items-center pt-3">
+                                    <i class="fa-solid fa-check pe-1"></i>
+                                    <p class="mb-0">Slides have a minimum height requirement of 44 inches</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img class="w-100 h-100" src="assets/imgs/fun-in-the-pool-and-water-park-2.jpg"
+                        alt="fun-in-the-pool-and-water-park">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.9414213638697!2d115.25495117369798!3d-8.505068986100838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d3fd1e5ded5%3A0x29ea1193260310fe!2sJl.%20Raya%20Ubud%20No.88%2C%20Ubud%2C%20Kecamatan%20Ubud%2C%20Kabupaten%20Gianyar%2C%20Bali%2080571%2C%20Indonesia!5e0!3m2!1sen!2s!4v1693642443483!5m2!1sen!2s"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Terms -->
+
+    <!-- Start booking -->
+    <div class="booking" id="header">
+        <div class="container py-5">
+            <div class="row overflow-hidden m-0">
+                <div class="form-data col-lg-6 p-5 ms-0">
+                    <form class="form" method="get">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input class="w-100 form-control" type="text" name="name" id="name" placeholder="Your Name">
+                                <label class="name_label mb-3 text-danger d-none" for="name">Name must start with capital letter an d have from 3 to 20 character</label>
+                            </div>
+                            <div class="d-md-flex justify-content-md-between"> 
+                                <div class="tel-input w-50 me-md-2">
+                                    <input type="tel" class="phone form-control w-100" id="phone" name="phone" placeholder="Your Phone">
+                                </div>
+                                <div class="email-input w-50 ms-md-2">
+                                    <input type="email" class="email form-control w-100" id="email" name="Email" placeholder="Email">
+                                </div>
+                            </div>
+                            <label class="phone_label mb-4 text-danger d-none " for="phone">Phone must start with 970 then nine digit number</label>
+                            <label class="email_label mb-3 text-danger d-none" for="email">Only gmail account allowed and  max 20 character for first part</label>
+                            <div class="col-lg-12">
+                                <select class="w-100 form-control" name="package" id="package">
+                                    <option value="sel" class="sel d-none" selected="selected" disabled><span
+                                            class="text-danger">Select Package</span></option>
+                                    <option value="Family">Family package</option>
+                                    <option value="Basic">Basic package</option>
+                                    <option value="Premum">Premum package</option>
+                                </select>
+                                <label class="package_label mb-3 text-danger d-none" for="package">select option please</label>
+
+                            </div>
+                            <div class="col-lg-12">
+                                <input name="date" class="date form-control w-100" placeholder="DD-MM-YYYY" type="text" id="date">
+                                <label class="date_label mb-3 text-danger d-none" for="date">insert DD-MM-YYYY format</label>
+
+                            </div>
+                            <div class="col-lg-12">
+                                <input class="w-100 number form-control" type="number" name="guest" id="guest" placeholder="Guest">
+                                <label class="guest_label mb-3 text-danger d-none" for="guest">insert number more than zero</label>
+
+                            </div>
+                            <div class="form-submit col-lg-12">
+                                <input class="submit" disabled type="submit" name="submit" id="btn-submit" value="BOOK NOW">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 text-white text-sm-center text-md-start p-0 pt-3">
+                    <h2>BOOK NOW</h2>
+                    <h3>SPEND YOUR HOLIDAY</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim adiqua minim veniam quis nostrud exercitation ullamco incididunt
+                        magna aliqua veniam quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                    <h4>Opening Hours</h4>
+                    <div class="op-hour">
+                        <div class="mf-day d-flex justify-content-between py-1">
+                            <span class="d-flex align-items-center">Monday - Friday</span>
+                            <div class="info-details">
+                                <i class="fa-regular fa-clock"></i>
+                                <p class="d-inline-block m-0">11:00 AM - 16:00 PM</->
+                            </div>
+                        </div>
+                        <div class="ss-days d-flex justify-content-between py-1">
+                            <span class="d-flex align-items-center">Saturday - Sunday</span>
+                            <div class="info-details">
+                                <i class="fa-regular fa-clock"></i>
+                                <p class="d-inline-block m-0">09:00 AM - 17:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="h-day d-flex justify-content-between py-1">
+                            <span class="d-flex align-items-center">Holiday</span>
+                            <div class="info-details">
+                                <i class="fa-regular fa-clock"></i>
+                                <p class="d-inline-block m-0">09:00 AM - 17:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-md-6 email d-flex">
+                            <div class="email-icon d-flex justify-content-center align-items-center">
+                                <i class="fa-regular fa-envelope pe-3"></i>
+                            </div>
+                            <div class="email-containt">
+                                <p class="m-0 p-0">Email Address</p>
+                                <span>support@domain.com</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 phone d-flex">
+                            <div class="phone-icon d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-phone-volume pe-3"></i>
+                            </div>
+                            <div class="phone-containt">
+                                <p class="m-0 p-0">Phone Number</p>
+                                <span>(+62)81 1235 3368</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End booking -->
+
+    <!-- Start Gellary -->
+    <div class="gellary py-5">
+        <div class="container overflow-hidden">
+            <div class="gellary-details text-center">
+                <h1 class="pb-3">OUR GALLERY</h1>
+                <h3 class="pb-3">CAPTURED MOMENTS IN WATERBOOM</h3>
+                <div class="pharaghrap pb-5 d-flex justify-content-center">
+                    <p class="w-50 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="data-col col-lg-4 col-md-12 mt-4 mt-md-0">
+                    <div class="row">
+                        <div class="col-lg-12 pb-4">
+                            <img class="w-100" src="assets/imgs/fun-in-the-pool-and-water-park-e1628826162513.jpg"
+                                alt="pool">
+                        </div>
+                        <div class="col-lg-12">
+                            <img class="w-100"
+                                src="assets/imgs/children-on-a-rubber-boat-in-the-water-park-ride-down-the-water-slide.jpg"
+                                alt="rubber">
+                        </div>
+                    </div>
+                </div>
+                <div class="data-col col-lg-4 col-md-12 mt-4 mt-md-0">
+                    <div class="row">
+                        <div class="col-lg-12 pb-4">
+                            <img class="w-100" src="assets/imgs/fun-in-the-pool-and-water-park-1-e1628495592253.jpg"
+                                alt="pool">
+                        </div>
+                        <div class="col-lg-12">
+                            <img class="w-100" src="assets/imgs/children-in-the-water-park.jpg"
+                                alt="children-in-the-water-park">
+                        </div>
+                    </div>
+                </div>
+                <div class="data-col col-lg-4 col-12 mt-4 mt-lg-0">
+                    <div class="row">
+                        <div class="col-lg-12 pb-4">
+                            <img class="w-100" src="assets/imgs/little-child-enjoying-her-time-in-a-hot-tub-.jpg"
+                                alt="little-child-enjoying-her-time-in-a-hot-tub-">
+                        </div>
+                        <div class="col-lg-12">
+                            <img class="w-100"
+                                src="assets/imgs/portrait-of-a-gorgeous-girl-in-a-black-swimsuit-on-the-stairs-of-a-pool-in-the-water-park--e1628826322176.jpg"
+                                alt="gorgeous-girl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Gellary -->
+
+    <!-- Start Footer-->
+    <footer class="footer position-relative text-white">
+        <div class="container w-100 h-100">
+            <div class="row pt-5">
+                <div class="col-lg-3 col-md-6 pt-5">
+                    <img src="assets/imgs/logo-footer.png" alt="logo-footer">
+                    <p class="pt-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <div class="info">
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Jl. Raya Ubud No.88, Bali 80571</p>
+                        </div>
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-envelope"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">support@domain.com</p>
+                        </div>
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">(+62)81 1235 3368</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 pt-5">
+                    <h4>Quick Links</h4>
+                    <div class="info">
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">About Us</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Service</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Booking</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Backage</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Contact</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-5">
+                    <h4>Useful Links</h4>
+                    <div class="info">
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Privacy Policy</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Terms and Conditions</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Disclaimer</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Support</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">FAQ</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pt-5">
+                    <h4>Opening Hours</h4>
+                    <div class="op-hour">
+                        <div class="m-f-day pt-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Monday - Friday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">11:00 AM - 16:00 PM</->
+                            </div>
+                        </div>
+                        <div class="s-s-day pt-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Saturday - Sunday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">09:00 AM - 17:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="holiday py-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Holiday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">09:00 AM - 17:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-md-flex justify-content-sm-between pay-card">
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-mastercard"></i>
+                            <p class="d-inline-block">MasterCard</p>
+                        </a>
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-paypal"></i>
+                            <p class="d-inline-block">PayPal</p>
+                        </a>
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-visa"></i>
+                            <p class="d-inline-block">Visa</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-detals mt-5 py-3 d-sm-flex justify-content-between">
+                <div class="text-md-start text-center">
+                    <p>Water & Amusement Park Template Kit by Jegtheme</p>
+                </div>
+                <div class="text-md-end text-center">
+                    <p>Copyright © 2021. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <svg class="position-absolute bottom-0 w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"
+            preserveAspectRatio="none">
+            <path class="elementor-shape-fill"
+                d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+            <path class="elementor-shape-fill" opacity="0.33"
+                d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+            <path class="elementor-shape-fill" opacity="0.66"
+                d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+        </svg>
+    </footer>
+    <!-- End Footer-->
+
+    <!--bootstrap 5.3-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

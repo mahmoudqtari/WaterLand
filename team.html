@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Our Team</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap 5.3-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- font-awesome 6.4-->
+    <link rel='stylesheet' href='assets/css/all.min.css'>
+    <!-- castume css-->
+    <link rel="stylesheet" href="assets/css/index.min.css">
+    <link rel="stylesheet" href="assets/css/team.min.css">
+    <!-- Media css-->
+    <link rel="stylesheet" href="assets/css/media.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/waterland-page-icon.png">
+
+</head>
+
+<body>
+    
+    <div class="scrool-top opacity-0 invisible position-fixed d-flex justify-content-center align-items-center z-3">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    
+    <div class="loding position-fixed w-100 h-100 d-flex justify-content-center align-items-center bg-white">
+        <span class="loader"></span>
+    </div>
+
+    <!-- Start Nav -->
+    <section class="nav-bar position-fixed w-100 z-3">
+        <nav class="navbar p-0 navbar-expand-lg fixed-top z-0">
+            <div class="container">
+                <div class="logo-img">
+                    <img class="img " src="assets/imgs/logo-waterland.png" alt="waterLand-img">
+                </div>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <div class="logo-img offcanvas-title" id="offcanvasNavbarLabel">
+                            <img class="img " src="assets/imgs/logo-waterland.png" alt="waterLand-img">
+                        </div>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav gap-2 mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="service.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="booking.html">Booking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="team.html">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <div class="social-team d-flex">
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-facebook-f px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-twitter px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-youtube px-2"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class="fa-brands fa-instagram px-2"></i>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="settings d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-bars"></i>
+                </div>-->
+            </div>
+        </nav>
+        <nav class="navbar p-0 fixed-rigth d-flex justify-content-end" id="navbar2">
+            <button class="settings d-block navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar1" aria-controls="offcanvasNavbar1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="offcanvas offcanvas-settings offcanvas-end" tabindex="-1" id="offcanvasNavbar1"
+                aria-labelledby="offcanvasNavbarLabel1">
+                <div class="offcanvas-header d-flex justify-content-end">
+                    <i class="fa-solid fa-xmark btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container">
+                        <div class="logo-img w-50">
+                            <img class="img w-100 h-100" src="assets/imgs/logo-footer.png" alt="waterLand-img">
+                        </div>
+                        <p class="py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel risus imperdiet, gravida justo eu.</p>
+                        <h3 class="text-white">Our Location</h3>
+                        <div class="info">
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">Jl. Raya Ubud No.88, Bali 80571</p>
+                            </div>
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-envelope"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">support@domain.com</p>
+                            </div>
+                            <div class="info-details pt-3">
+                                <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                                <p class="text-white d-inline-block pb-0 mb-0">(+62)81 1235 3368</p>
+                            </div>
+                        </div>
+                        <h3 class="text-white pt-5">Social Media</h3>
+                        <div class="social-icons d-flex gap-4">
+                            <a class="facebook d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a class="twitter d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a class="instagram d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a class="youtube d-flex justify-content-center align-items-center">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- End Nav -->
+
+    <!-- Start team header -->
+    <div class="team-header d-flex justify-content-center align-items-center">
+        <div class="team-header-content text-center">
+            <h2 class="text-uppercase text-white">OUR TEAM</h2>
+            <span class="text-white d-inline-block pe-2">Home</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="text-white d-inline-block ps-2">Team</span>
+        </div>
+    </div>
+    <!-- End team header -->
+
+    <!-- Start Team -->
+    <div class="team change-navbar-point py-5">
+        <div class="container">
+            <div class="team-details text-center">
+                <h2 class="pb-3 our-team">OUR TEAM</h2>
+                <h3 class="pb-3">MEET WITH PROFESSIONAL TEAM</h3>
+                <div class="pharaghrap pb-5 d-flex justify-content-center">
+                    <p class="w-50 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="data-col col-lg-4 col-md-6 mt-4 mt-md-0">
+                    <div class="img position-relative">
+                        <div class="overlay overflow-hidden d-flex justify-content-center align-items-end position-absolute w-100 bottom-0 z-2">
+                            <div class="details text-center">
+                                <h4 class="text-white">Liana Nieves</h4>
+                                <p class="text-white">Management</p>
+                                <div class="social-team d-flex pb-5 gap-2">
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-facebook-f px-2"></i>
+                                    </a>
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-twitter px-2"></i>
+                                    </a>
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-instagram px-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="w-100 object-fit-cover" src="assets/imgs/cheerful-young-woman-posing-in-creative-agency-P8NMKLX.jpg" alt="cheerful-young-woman">
+                    </div>
+                </div>
+                <div class="data-col col-lg-4 col-md-6 mt-4 mt-md-0">
+                    <div class="img position-relative">
+                        <div class="overlay overflow-hidden d-flex justify-content-center align-items-end position-absolute w-100 bottom-0 z-2">
+                            <div class="details text-center">
+                                <h4 class="text-white">Teddie Swanson</h4>
+                                <p class="text-white">Chief Executive Officer</p>
+                                <div class="social-team d-flex pb-5 gap-2">
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-facebook-f px-2"></i>
+                                    </a>
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-twitter px-2"></i>
+                                    </a>
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-instagram px-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="w-100 object-fit-cover" src="assets/imgs/businessman-posing-TZVK8U5.jpg" alt="businessman">
+                    </div>
+                </div>
+                <div class="data-col col-lg-4 col-12 mt-4 mt-lg-0">
+                    <div class="img position-relative">
+                        <div class="overlay overflow-hidden d-flex justify-content-center align-items-end position-absolute w-100 bottom-0 z-2">
+                            <div class="details text-center">
+                                <h4 class="text-white">Laurel Golden</h4>
+                                <p class="text-white">Sales Director</p>
+                                <div class="social-team d-flex pb-5 gap-2">
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-facebook-f px-2"></i>
+                                    </a>
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-twitter px-2"></i>
+                                    </a>
+                                    <a class="nav-item d-flex justify-content-center align-items-center">
+                                        <i class="fa-brands fa-instagram px-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="w-100 object-fit-cover" src="assets/imgs/successful-businesswoman-posing-in-office-7Y384B5.jpg" alt="busineswomen">
+                    </div>
+                </div>
+            </div>
+            <div class="row skills py-5">
+                <div class="col-sm-6 communication pb-4">
+                    <div class="level92 d-flex justify-content-between pb-2">
+                        <span>Communication</span>
+                        <span class="percentage92"></span>
+                    </div>
+                    <div class="level-color-100">
+                        <div class="level-color-92">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 customer-services pb-4">
+                    <div class="level86 d-flex justify-content-between pb-2">
+                        <span>Customer Service</span>
+                        <span class="percentage86"></span>
+                    </div>
+                    <div class="level-color-100">
+                        <div class="level-color-86">
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-sm-6 experiences pb-4">
+                    <div class="level88 d-flex justify-content-between pb-2">
+                        <span>Experiences</span>
+                        <span class="d-inline-block percentage88"></span>
+                    </div>
+                    <div class="level-color-100">
+                        <div class="level-color-88">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 lifeguard pb-4">
+                    <div class="level88 d-flex justify-content-between pb-2">
+                        <span>Certified Lifeguard</span>
+                        <span class="percentage88_2"></span>
+                    </div>
+                    <div class="level-color-100">
+                        <div class="level-color-88">
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- End Team -->
+
+    <!-- Start visitor -->
+    <section class="visitor py-5">
+        <div class="container py-5 text-white">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <h2 class="pb-3 text-center">8450+ HAPPY VISITORS</h2>
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <p class="pb-3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua minim veniam quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit"</p>
+                        <div class="img pb-3">
+                            <img src="assets/imgs/clifford.jpg" alt="clifford">
+                        </div>
+                        <h3>Clifford Charles</h3>
+                        <p class="student">Students</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <p class="pb-3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua minim veniam quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit"</p>
+                        <div class="img pb-3">
+                            <img src="assets/imgs/eddie.png" alt="eddie">
+                        </div>
+                        <h3>Eddie Jacobs</h3>
+                        <p class="student">Students</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <p class="pb-3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore et dolore magna aliqua minim veniam quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit"</p>
+                        <div class="img pb-3">
+                            <img src="assets/imgs/harvie.png" alt="harvie">
+                        </div>
+                        <h3>Harvie Sampson</h3>
+                        <p class="student">Students</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End visitor -->
+
+    <!-- Start Blog -->
+    <section class="blog py-5 overflow-hidden">
+        <div class="container pb-5">
+            <div class="blog-details text-center">
+                <h1 class="pb-3">OUR BLOG</h1>
+                <h2 class="pb-3">LATEST BLOG & ARTICLES</h2>
+                <div class="pharaghrap d-flex justify-content-center">
+                    <p class="w-50 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+                <div class="row col-sm-6 px-0">
+                    <div class="data-card col-md-12 col-lg-6 mt-4">
+                        <div class="card border-0 h-100">
+                            <img class="w-100 h-100 object-fit-cover"
+                                src="assets/imgs/picture-of-little-kids-enjoying-in-swimming-pool.jpg"
+                                alt="little-kids">
+                        </div>
+                    </div>
+                    <div class="data-col col-md-12 col-lg-6 mt-4">
+                        <div class="card border-0">
+                            <div class="details">
+                                <h3>Why Children Dont Like Getting Out Of The Water</h3>
+                                <div class="time-date pb-2 d-inline-block">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p class="d-inline-block mb-0">August 10, 2021</p>
+                                </div>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore</p>
+                                <a href="#" class="d-inline-block pt-3">
+                                    <span class="text-uppercase"> read more </span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-sm-6 px-0">
+                    <div class="data-card col-md-12 col-lg-6 mt-4">
+                        <div class="card border-0 h-100">
+                            <img class="w-100 h-100 object-fit-cover"
+                                src="assets/imgs/great-weather-for-winter-activities.jpg" alt="great-weather">
+                        </div>
+                    </div>
+                    <div class="data-col col-md-12 col-lg-6 mt-4">
+                        <div class="card border-0">
+                            <div class="details">
+                                <h3>Why Children Dont Like Getting Out Of The Water</h3>
+                                <div class="time-date pb-2 d-inline-block">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p class="d-inline-block mb-0">August 10, 2021</p>
+                                </div>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore</p>
+                                <a href="#" class="d-inline-block pt-3">
+                                    <span class="text-uppercase"> read more </span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-sm-6 px-0">
+                    <div class="data-card col-md-12 col-lg-6 mt-4">
+                        <div class="card border-0 h-100">
+                            <img class="w-100 h-100 object-fit-cover" src="assets/imgs/children-in-the-water-park.jpg"
+                                alt="children-in-the-water-park">
+                        </div>
+                    </div>
+                    <div class="data-col col-md-12 col-lg-6 mt-4">
+                        <div class="card border-0">
+                            <div class="details">
+                                <h3>Why Children Dont Like Getting Out Of The Water</h3>
+                                <div class="time-date pb-2 d-inline-block">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p class="d-inline-block mb-0">August 10, 2021</p>
+                                </div>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore</p>
+                                <a href="#" class="d-inline-block pt-3">
+                                    <span class="text-uppercase"> read more </span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-sm-6 px-0">
+                    <div class="data-card col-md-12 col-lg-6 mt-4">
+                        <div class="card border-0 h-100">
+                            <img class="w-100 h-100 object-fit-cover"
+                                src="assets/imgs/group-of-friends-enjoying-summer-vacation-summer-holidays-vacation-and-happiness-concept.jpg"
+                                alt="frinds">
+                        </div>
+                    </div>
+                    <div class="data-col col-md-12 col-lg-6 mt-4">
+                        <div class="card border-0">
+                            <div class="details">
+                                <h3>Why Children Dont Like Getting Out Of The Water</h3>
+                                <div class="time-date pb-2 d-inline-block">
+                                    <i class="fa-solid fa-clock ps-2"></i>
+                                    <p class="d-inline-block mb-0">August 10, 2021</p>
+                                </div>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore</p>
+                                <a href="#" class="d-inline-block pt-3">
+                                    <span class="text-uppercase"> read more </span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Blog -->
+
+    <!-- Start Footer-->
+    <footer class="footer position-relative text-white">
+        <div class="container w-100 h-100">
+            <div class="row pt-5">
+                <div class="col-lg-3 col-md-6 pt-5">
+                    <img src="assets/imgs/logo-footer.png" alt="logo-footer">
+                    <p class="pt-4 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <div class="info">
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Jl. Raya Ubud No.88, Bali 80571</p>
+                        </div>
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-envelope"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">support@domain.com</p>
+                        </div>
+                        <div class="info-details pt-3">
+                            <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">(+62)81 1235 3368</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 pt-5">
+                    <h4>Quick Links</h4>
+                    <div class="info">
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">About Us</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Service</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Booking</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Backage</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Contact</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 pt-5">
+                    <h4>Useful Links</h4>
+                    <div class="info">
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Privacy Policy</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Terms and Conditions</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Disclaimer</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">Support</p>
+                        </a>
+                        <a class="info-details d-inline-block pt-3 w-100">
+                            <i aria-hidden="true" class="fas fa-chevron-right"></i>
+                            <p class="text-white d-inline-block pb-0 mb-0">FAQ</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pt-5">
+                    <h4>Opening Hours</h4>
+                    <div class="op-hour">
+                        <div class="m-f-day pt-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Monday - Friday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">11:00 AM - 16:00 PM</->
+                            </div>
+                        </div>
+                        <div class="s-s-day pt-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Saturday - Sunday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">09:00 AM - 17:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="holiday py-3 d-md-flex justify-content-between align-items-center">
+                            <p class="text-white d-inline-block pb-0 mb-0">Holiday</p>
+                            <div class="info-details">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="d-inline-block m-0">09:00 AM - 17:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-md-flex justify-content-sm-between pay-card">
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-mastercard"></i>
+                            <p class="d-inline-block">MasterCard</p>
+                        </a>
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-paypal"></i>
+                            <p class="d-inline-block">PayPal</p>
+                        </a>
+                        <a class="info-details text-white">
+                            <i aria-hidden="true" class="fab fa-cc-visa"></i>
+                            <p class="d-inline-block">Visa</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-detals mt-5 py-3 d-sm-flex justify-content-between">
+                <div class="text-md-start text-center">
+                    <p>Water & Amusement Park Template Kit by Jegtheme</p>
+                </div>
+                <div class="text-md-end text-center">
+                    <p>Copyright © 2021. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+        <svg class="position-absolute bottom-0 w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"
+            preserveAspectRatio="none">
+            <path class="elementor-shape-fill"
+                d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+            <path class="elementor-shape-fill" opacity="0.33"
+                d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+            <path class="elementor-shape-fill" opacity="0.66"
+                d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"
+                transform="scale(1, -1) translate(0, -100)"></path>
+        </svg>
+    </footer>
+    <!-- End Footer-->
+
+    <!--bootstrap 5.3-->
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
